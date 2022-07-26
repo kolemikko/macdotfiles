@@ -159,4 +159,5 @@
 
 #+begin_src sh :tangle ../.zshrc
   alias vim=nvim
+  alias e='emacs -nw'
 #+end_src
