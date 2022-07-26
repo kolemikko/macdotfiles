@@ -153,3 +153,10 @@
   vnoremap <Leader>s :sort n<CR>
   nnoremap <leader><space> :nohlsearch<CR>
 #+end_src
+
+* Config
+** .zshrc
+
+#+begin_src sh :tangle ../.zshrc
+  alias vim=nvim
+#+end_src
