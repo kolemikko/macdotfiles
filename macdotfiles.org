@@ -155,9 +155,9 @@
 #+end_src
 
 * Config
-** .zshrc
+** Oh-My-Zsh Aliases
 
-#+begin_src sh :tangle ../.zshrc
+#+begin_src sh :tangle ../.oh-my-zsh/custom/aliases.zsh
   alias vim=nvim
   alias e='emacs -nw'
 #+end_src
