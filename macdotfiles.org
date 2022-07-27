@@ -155,9 +155,31 @@
 #+end_src
 
 * Config
-** Oh-My-Zsh Aliases
+** Fish
 
-#+begin_src sh :tangle ../.oh-my-zsh/custom/aliases.zsh
-  alias vim=nvim
-  alias e='emacs -nw'
+#+begin_src sh :tangle ../.config/fish/config.fish :mkdirp yes
+  set -x PATH $PATH /opt/homebrew/bin
+  set -x PATH $PATH ~/.dotnet/tools
+  set -x PATH $PATH ~/.cargo/bin
+
+  abbr -a vim nvim
+  abbr -a e 'emacs -nw'
+  abbr -a g git
+  abbr -a c cargo
+
+  if command -v exa > /dev/null
+     abbr -a l 'exa'
+     abbr -a ls 'exa'
+     abbr -a ll 'exa -l'
+     abbr -a lll 'exa -la'
+  else
+      abbr -a l 'ls'
+      abbr -a ll 'ls -l'
+      abbr -a lll 'ls -la'
+  end
+
+  if command -v zoxide > /dev/null
+     zoxide init fish | source
+     abbr -a cd z
+  end
 #+end_src
