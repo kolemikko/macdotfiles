@@ -156,12 +156,17 @@
 
 * Config
 ** Fish
+*** Paths
 
-#+begin_src sh :tangle ../.config/fish/config.fish :mkdirp yes
+#+begin_src sh :tangle ../.config/fish/conf.d/paths.fish :mkdirp yes
   set -x PATH $PATH /opt/homebrew/bin
   set -x PATH $PATH ~/.dotnet/tools
   set -x PATH $PATH ~/.cargo/bin
+#+end_src
 
+*** Aliases
+
+#+begin_src sh :tangle ../.config/fish/conf.d/aliases.fish :mkdirp yes
   abbr -a vim nvim
   abbr -a e 'emacs -nw'
   abbr -a g git
