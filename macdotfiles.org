@@ -172,6 +172,9 @@
   abbr -a g git
   abbr -a c cargo
 
+  abbr -a nc 'npm ci'
+  abbr -a ns 'npm run serve'
+
   if command -v exa > /dev/null
      abbr -a l 'exa'
      abbr -a ls 'exa'
