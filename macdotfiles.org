@@ -156,6 +156,14 @@
 
 * Config
 ** Fish
+*** Zoxide
+
+#+begin_src sh :tangle ../.config/fish/config.fish :mkdirp yes
+  if command -v zoxide > /dev/null
+     zoxide init fish | source
+  end
+#+end_src
+
 *** Paths
 
 #+begin_src sh :tangle ../.config/fish/conf.d/paths.fish :mkdirp yes
@@ -189,7 +197,6 @@
   end
 
   if command -v zoxide > /dev/null
-     zoxide init fish | source
      abbr -a cd z
   end
 #+end_src
