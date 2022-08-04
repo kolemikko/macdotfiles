@@ -200,3 +200,12 @@
      abbr -a cd z
   end
 #+end_src
+
+** OS defaults
+
+#+begin_src sh :tangle ../macosdefaults.sh :shebang "#!/bin/sh"
+  defaults write com.apple.finder AppleShowAllFiles -bool true
+
+  defaults write com.apple.screencapture location -string “$HOME/Downloads/Screenshots”
+  defaults write com.apple.screencapture type -string “png”
+#+end_src
