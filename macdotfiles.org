@@ -155,7 +155,22 @@
 #+end_src
 
 * Config
+** macosdefaults
+
+#+begin_src sh :tangle ../macosdefaults.sh :shebang "#!/bin/bash"
+  defaults write com.apple.finder AppleShowAllFiles -bool true
+
+  defaults write com.apple.screencapture location -string “$HOME/Downloads/Screenshots”
+  defaults write com.apple.screencapture type -string “png”
+#+end_src
+
 ** Fish
+*** .profile
+
+#+begin_src sh :tangle ../.config/fish/config.fish :mkdirp yes
+  fenv source ~/.profile
+#+end_src
+
 *** Zoxide
 
 #+begin_src sh :tangle ../.config/fish/config.fish :mkdirp yes
@@ -201,11 +216,3 @@
   end
 #+end_src
 
-** OS defaults
-
-#+begin_src sh :tangle ../macosdefaults.sh :shebang "#!/bin/sh"
-  defaults write com.apple.finder AppleShowAllFiles -bool true
-
-  defaults write com.apple.screencapture location -string “$HOME/Downloads/Screenshots”
-  defaults write com.apple.screencapture type -string “png”
-#+end_src
