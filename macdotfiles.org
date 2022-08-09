@@ -183,6 +183,7 @@
 
 #+begin_src sh :tangle ../.config/fish/conf.d/paths.fish :mkdirp yes
   set -x PATH $PATH /opt/homebrew/bin
+  set -x PATH $PATH /opt/homebrew/opt
   set -x PATH $PATH ~/.dotnet/tools
   set -x PATH $PATH ~/.cargo/bin
 #+end_src
