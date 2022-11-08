@@ -155,6 +155,20 @@
 #+end_src
 
 * Config
+** Git
+*** attributes
+
+#+begin_src sh :tangle ../.config/git/attributes :mkdirp yes
+  *.rs diff
+  *.cs diff
+  *.sh diff
+  *.html diff
+  *.xml diff
+  *.csv diff
+  *.txt diff
+
+#+end_src
+
 ** macosdefaults
 
 #+begin_src sh :tangle ../macosdefaults.sh :shebang "#!/bin/bash"
